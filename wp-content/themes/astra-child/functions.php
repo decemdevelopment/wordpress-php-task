@@ -10,11 +10,11 @@
 
 add_action( 'woocommerce_single_product_summary', 'display_custom_field' );
 function display_custom_field() {
-    $customText = get_field('custom_field_text');
+    $custom_text = get_field( 'custom_field_text' );
 
     ?>
     <span class="woocommerce-summary__custom-field-text">
-        <?php esc_html_e($customText); ?>
+        <?php esc_html_e( $custom_text, 'astra-child' ); ?>
     </span>
     <?php
 }
